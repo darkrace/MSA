@@ -1,0 +1,9 @@
+<div class="col-sm-6  col-sm-offset-3">
+    <h1>Register</h1>
+    <form method="post" action="{% url 'register' %}">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="register" />
+    <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+    <p>you need to <a href="{% url 'login' %}">Login</a></p>
+</div>
